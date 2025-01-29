@@ -1,34 +1,40 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app-container">
+      <header>
+        <h1>ehnding</h1>
+      </header>
+
+      <main>
+        {/* Tracker.gg embed */}
+        <div className="tracker-container">
+          <h2>Marvel Rivals Stats</h2>
+          <iframe
+            src="https://tracker.gg/marvel-rivals/profile/ign/zehn/overview"
+            width="100%"
+            height="600"
+            frameBorder="0"
+            title="Tracker.gg Profile"
+          />
+        </div>
+
+        {/* Keep the counter as a test component */}
+        <div className="card">
+          <button onClick={() => setCount((count) => count + 1)}>
+            count is {count}
+          </button>
+        </div>
+      </main>
+
+      <footer>
+        <p>Created by Ethan Nguyen</p>
+      </footer>
+    </div>
   )
 }
 
